@@ -1,24 +1,28 @@
-function validateEmail(email) {
-    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    return emailPattern.test(email);
-}
-
-document.getElementById("loginForm").addEventListener("submit", function(event) {
-    event.preventDefault();
-    document.getElementById("emailError").innerHTML = "";
-
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
-
-    if (!validateEmail(email)) {
-        document.getElementById("emailError").innerHTML = "Please enter a valid email address.";
-        return;
+function validate(){
+    let username = document.getElementById("username").value.trim();
+    let password = document.getElementById("password").value.trim();
+    if(username == "" || password == ""){
+        document.getElementById("table").innerHTML = "***Both fields must be given to login";
+        return false;
     }
-
-
-    alert("Login successful!");
-});
-
-function forgotPassword() {
-    window.location.href = "forgot-password.html";
+    else if(username == "user" && password == "user123"){
+        window.location.href = "customerDashboard.html";
+        return false;
+    }
+    else if(username == "admin" && password == "admin123"){
+        window.location.href = "adminDashboard.html";
+        return false;
+    }
+    else if(username == "chef" && password == "chef123"){
+        window.location.href = "chef.html";
+        return false;
+    }
+    else if(username == "server" && password == "server123"){
+        window.location.href = "server.html";
+        return false;
+    }
+    else{
+        document.getElementById("table").innerHTML = "***Wrong username or password.";
+        return false;
+    }
 }
