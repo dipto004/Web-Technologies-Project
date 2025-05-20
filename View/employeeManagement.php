@@ -1,9 +1,14 @@
+<?php
+  session_start();
+  if(isset($_SESSION['status'])){
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
   <title>Employee Management</title>
   <link rel="stylesheet" href="employeeManagement.css">
-  <script src="employeeManagement.js"></script>
+  <script src="../Controller/employeeManagement.js"></script>
 </head>
 <body>
   <h1>Employee Management</h1>
@@ -99,3 +104,10 @@
     </table>
 </body>
 </html>
+
+<?php
+  }else{
+    header("location: home.php");
+  }
+
+?>

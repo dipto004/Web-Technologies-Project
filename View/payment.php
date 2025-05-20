@@ -1,3 +1,8 @@
+<?php
+  session_start();
+  if(isset($_SESSION['status'])){
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -43,6 +48,13 @@
 
     <div id="receipt"></div>
   </div>
-  <script src="payment.js"></script>
+  <script src="../Controller/payment.js"></script>
 </body>
 </html>
+
+<?php
+  }else{
+    header("location: home.php");
+  }
+
+?>

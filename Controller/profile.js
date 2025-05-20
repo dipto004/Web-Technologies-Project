@@ -87,7 +87,5 @@ function enableEditing() {
         return false;
     }
 
-    if(true){
-      window.location.href = "profile.html";
-    }
+    return true;
   }

@@ -1,3 +1,8 @@
+<?php
+  session_start();
+  if(isset($_SESSION['status'])){
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -78,6 +83,13 @@
     </form>
   </section>
 
-  <script src="employeeDashboard.js"></script>
+  <script src="../Controller/employeeDashboard.js"></script>
 </body>
 </html>
+
+<?php
+  }else{
+    header("location: home.php");
+  }
+
+?>

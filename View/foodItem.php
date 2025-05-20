@@ -1,3 +1,8 @@
+
+<?php
+  session_start();
+  if(isset($_SESSION['status'])){
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -43,6 +48,13 @@
         <div class="food-name">Chicken Burger</div>
       </div>
   </div>
-  <script src="foodItem.js"></script>
+  <script src="../Controller/foodItem.js"></script>
 </body>
 </html>
+
+<?php
+  }else{
+    header("location: home.php");
+  }
+
+?>

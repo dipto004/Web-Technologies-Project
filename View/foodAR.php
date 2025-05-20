@@ -1,3 +1,8 @@
+<?php
+  session_start();
+  if(isset($_SESSION['status'])){
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,6 +32,13 @@
       <div id="div4"></div>
     </div>
   </div>
-  <script src="foodAR.js"></script>  
+  <script src="../Controller/foodAR.js"></script>  
 </body>
 </html>
+
+<?php
+  }else{
+    header("location: home.php");
+  }
+
+?>

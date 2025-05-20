@@ -1,3 +1,7 @@
+<?php
+  session_start();
+  if(isset($_SESSION['home'])){
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +13,7 @@
     <div class="image-half"></div>
     <div class="text-half">
       <h1>Registration</h1>
-      <form action="login.html" onsubmit="return validate()">
+      <form action="../Controller/signupCheck.php" method="post" onsubmit="return validate()">
         <table>
             <tr>
                 <td><label for="firstName">First Name</label></td>
@@ -69,6 +73,12 @@
       </form>
     </div>
   </div>
-  <script src="signup.js"></script>
+  <script src="../Controller/signup.js"></script>
 </body>
 </html>
+<?php
+  }else{
+    header("location: home.php");
+
+  }
+?>

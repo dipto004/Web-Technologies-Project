@@ -1,3 +1,8 @@
+<?php
+  session_start();
+  if(isset($_SESSION['status'])){
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,10 +17,17 @@
   </header>
 
   <div class="container">
-    <button class="profile-btn" onclick="window.location.href='employeeDashboard.html'">Profile</button>
+    <button class="profile-btn" onclick="window.location.href='employeeDashboard.php'">Profile</button>
     <!-- <button class="order-btn" onclick="window.location.href='chefDashboard.html'">Order Queue</button> -->
-    <button class="order-btn" onclick="window.location.href='orderQueue.html'">Order Queue</button>
+    <button class="order-btn" onclick="window.location.href='orderQueue.php'">Order Queue</button>
 
   </div>
 </body>
 </html>
+
+<?php
+  }else{
+    header("location: home.php");
+  }
+
+?>

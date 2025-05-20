@@ -1,3 +1,8 @@
+<?php
+  session_start();
+  if(isset($_SESSION['status'])){
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,7 +38,14 @@
     </form>
     <div id="confirmation" style="margin-top: 1rem; font-weight: bold; color: green;"></div>
   </div>
-  <script src="serverDashboard.js"></script>
+  <script src="../Controller/serverDashboard.js"></script>
 
 </body>
 </html>
+
+<?php
+  }else{
+    header("location: home.php");
+  }
+
+?>

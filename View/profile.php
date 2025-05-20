@@ -1,3 +1,8 @@
+<?php
+  session_start();
+  if(isset($_SESSION['status'])){
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +14,7 @@
     <div class="image-half"></div>
     <div class="text-half">
       <h1>Profile</h1>
-      <form id="profileForm">
+      <form action= "../Controller/profileCheck.php" method= "post" id="profileForm">
         <div class="info" style="align-items: center;">
           <img id="profileImagePreview" src="images/profile.jpeg" alt="Profile Image" />
           <input type="file" id="profileImage" accept="image/*" disabled>
@@ -17,27 +22,27 @@
 
         <div class="info">
           <label for="firstName">First Name</label>
-          <input type="text" id="firstname" value="Dipto" disabled>
+          <input type="text" name="firstName" id="firstname" value="Dipto" disabled>
         </div>
         <div class="info">
           <label for="lastName">Last Name</label>
-          <input type="text" id="lastname" value="Chakaraborty" disabled>
+          <input type="text" name="lastName" id="lastname" value="Chakaraborty" disabled>
         </div>
         <div class="info">
           <label for="username">Username</label>
-          <input type="text" id="username" value="user" disabled>
+          <input type="text" name="username" id="username" value="user" disabled>
         </div>
         <div class="info">
           <label for="email">Email</label>
-          <input type="email" id="email" value="22-46713-1@student.aiub.edu" disabled>
+          <input type="email" name="email" id="email" value="22-46713-1@student.aiub.edu" disabled>
         </div>
         <div class="info">
           <label for="dob">Date of Birth</label>
-          <input type="date" id="dob" value="2002-01-01" disabled>
+          <input type="date"  name="dob" id="dob" value="2002-01-01" disabled>
         </div>
         <div class="info">
           <label for="phone">Phone No</label>
-          <input type="tel" id="phone" value="01712345678" disabled>
+          <input type="tel" name="phone" id="phone" value="01712345678" disabled>
         </div>
         <div class="info">
           <label for="gender">Gender</label>
@@ -62,11 +67,18 @@
 
         <div class="buttons">
           <button type="button" onclick="enableEditing()">Edit Information</button>
-          <button type="submit" id="saveBtn" onclick="return saveChanges()" style="display: none;">Save Changes</button>
+          <button type="submit" name="submit" id="saveBtn" onclick="return saveChanges()" style="display: none;">Save Changes</button>
         </div>
       </form>
     </div>
   </div>
-  <script src="profile.js"></script>
+  <script src="../Controller/profile.js"></script>
 </body>
 </html>
+
+<?php
+  }else{
+    header("location: home.php");
+  }
+
+?>
