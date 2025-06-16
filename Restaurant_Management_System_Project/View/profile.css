@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, hsl(269, 85%, 43%), hsl(218, 97%, 57%));
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px hsla(0, 0%, 0%, 0.15);
+  width: 100%;
+  max-width: 450px;
+  position: relative;
+}
+
+header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+  color: hsl(0, 0%, 20%);
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 6px 14px;
+  background-color: hsl(0, 0%, 40%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background-color: hsl(0, 0%, 20%);
+}
+
+form .field {
+  margin-bottom: 20px;
+}
+
+.field label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.field input {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 15px;
+  border: 1px solid hsl(0, 0%, 80%);
+  border-radius: 8px;
+}
+
+.field input:disabled {
+  background-color: #f2f2f2;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.buttons button {
+  width: 48%;
+  padding: 10px;
+  font-size: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#editBtn {
+  background-color: #999;
+  color: white;
+}
+
+#editBtn:hover {
+  background-color: #666;
+}
+
+input[type='submit'] {
+  background-color: hsl(218, 97%, 57%);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px; 
+  cursor: pointer;
+}
+
+input[type='submit']:hover {
+  background-color: hsl(220, 79%, 49%);
+}
+
+input[type='password'] {
+    display: none;
+}

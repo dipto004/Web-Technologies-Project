@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  font-size: 14px; /* Reduced base font size */
+}
+
+.reservation-hero {
+  background: url('images/home02.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6); /* Fixed color format */
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 520px;
+  color: #fff;
+}
+
+.form-container h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.5rem; /* Slightly smaller */
+}
+
+form label {
+  display: block;
+  margin: 8px 0 4px;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 0.9rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+.time-slot-group {
+  display: flex;
+  gap: 8px;
+  margin-top: 0.3rem;
+}
+
+.time-slot-group select {
+  flex: 1;
+  padding: 0.4rem;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  border: none;
+}
+
+input[type='submit'] {
+  background-color: #ff7043;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+input[type='submit']:hover {
+  background-color: #e64a19;
+}
+
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 6px 14px;
+  background-color: hsl(0, 0%, 40%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background-color: hsl(0, 0%, 20%);
+}
